@@ -2,16 +2,15 @@
 
 import React from 'react';
 import { Text, View, AppRegistry } from 'react-native';
-import Header from './src/components/header'
+import Header from './src/components/Header'
+import AlbumList from './src/components/AlbumList'
 
 //Create component
 const App = () => {
     return (
       <View>
-        <Header />
-        <Text>
-          Welcome to Roberto!
-        </Text>
+        <Header headerText={'Albums'}/>
+        <AlbumList />
       </View>
     );
 };
