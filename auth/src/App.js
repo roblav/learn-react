@@ -1,11 +1,13 @@
 /* import statements */
 
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header } from './components/common';
+import LoginForm from './components/LoginForm'
 
 class App extends Component {
+    
     componentWillMount() {
         firebase.initializeApp({
             apiKey: 'AIzaSyAPxEzggYmoxp3EcKdm75Hw_os87atV8ig',
@@ -16,11 +18,12 @@ class App extends Component {
             messagingSenderId: '883665500528'
         });
     }
+
     render() {
         return (
             <View>
                 <Header headerText="Authentication" />
-                <Text> Hello App </Text>
+                <LoginForm />
             </View>
         );
     }
